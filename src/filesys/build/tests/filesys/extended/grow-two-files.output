@@ -47,7 +47,7 @@ Executing 'grow-two-files':
 grow-two-files: exit(0)
 Execution of 'grow-two-files' complete.
 Timer: 829 ticks
-Thread: 7 idle ticks, 578 kernel ticks, 246 user ticks
+Thread: 7 idle ticks, 577 kernel ticks, 247 user ticks
 hdb1 (filesys): 611 reads, 531 writes
 hda2 (scratch): 237 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

@@ -42,7 +42,7 @@ Executing 'grow-sparse':
 grow-sparse: exit(0)
 Execution of 'grow-sparse' complete.
 Timer: 1133 ticks
-Thread: 7 idle ticks, 575 kernel ticks, 554 user ticks
+Thread: 6 idle ticks, 575 kernel ticks, 555 user ticks
 hdb1 (filesys): 826 reads, 630 writes
 hda2 (scratch): 235 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

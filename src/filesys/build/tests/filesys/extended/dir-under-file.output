@@ -35,8 +35,8 @@ Executing 'dir-under-file':
 (dir-under-file) end
 dir-under-file: exit(0)
 Execution of 'dir-under-file' complete.
-Timer: 608 ticks
-Thread: 3 idle ticks, 569 kernel ticks, 38 user ticks
+Timer: 607 ticks
+Thread: 4 idle ticks, 568 kernel ticks, 37 user ticks
 hdb1 (filesys): 513 reads, 473 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

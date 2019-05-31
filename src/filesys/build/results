@@ -111,7 +111,7 @@ pass tests/filesys/extended/dir-rm-root-persistence
 pass tests/filesys/extended/dir-rm-tree-persistence
 pass tests/filesys/extended/dir-rmdir-persistence
 pass tests/filesys/extended/dir-under-file-persistence
-FAIL tests/filesys/extended/dir-vine-persistence
+pass tests/filesys/extended/dir-vine-persistence
 pass tests/filesys/extended/grow-create-persistence
 pass tests/filesys/extended/grow-dir-lg-persistence
 pass tests/filesys/extended/grow-file-size-persistence

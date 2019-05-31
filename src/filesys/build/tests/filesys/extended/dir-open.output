@@ -38,7 +38,7 @@ Executing 'dir-open':
 dir-open: exit(0)
 Execution of 'dir-open' complete.
 Timer: 617 ticks
-Thread: 5 idle ticks, 570 kernel ticks, 44 user ticks
+Thread: 8 idle ticks, 568 kernel ticks, 43 user ticks
 hdb1 (filesys): 520 reads, 475 writes
 hda2 (scratch): 234 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

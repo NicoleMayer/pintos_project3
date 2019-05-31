@@ -41,7 +41,7 @@ Executing 'grow-seq-lg':
 grow-seq-lg: exit(0)
 Execution of 'grow-seq-lg' complete.
 Timer: 1307 ticks
-Thread: 9 idle ticks, 570 kernel ticks, 730 user ticks
+Thread: 5 idle ticks, 569 kernel ticks, 735 user ticks
 hdb1 (filesys): 845 reads, 662 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

@@ -41,7 +41,7 @@ Executing 'grow-seq-sm':
 grow-seq-sm: exit(0)
 Execution of 'grow-seq-sm' complete.
 Timer: 679 ticks
-Thread: 3 idle ticks, 568 kernel ticks, 110 user ticks
+Thread: 5 idle ticks, 567 kernel ticks, 109 user ticks
 hdb1 (filesys): 540 reads, 490 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

@@ -38,7 +38,7 @@ Executing 'sm-seq-random':
 sm-seq-random: exit(0)
 Execution of 'sm-seq-random' complete.
 Timer: 407 ticks
-Thread: 23 idle ticks, 285 kernel ticks, 102 user ticks
+Thread: 26 idle ticks, 283 kernel ticks, 101 user ticks
 hda2 (filesys): 288 reads, 238 writes
 hda3 (scratch): 106 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes

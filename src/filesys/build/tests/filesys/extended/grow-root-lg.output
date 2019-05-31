@@ -83,8 +83,8 @@ Executing 'grow-root-lg':
 (grow-root-lg) end
 grow-root-lg: exit(0)
 Execution of 'grow-root-lg' complete.
-Timer: 2502 ticks
-Thread: 3 idle ticks, 572 kernel ticks, 1929 user ticks
+Timer: 2501 ticks
+Thread: 5 idle ticks, 570 kernel ticks, 1928 user ticks
 hdb1 (filesys): 624 reads, 580 writes
 hda2 (scratch): 234 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

@@ -14,6 +14,8 @@ static bool inode_deallocate(struct inode *inode);
 
 static bool inode_keep(struct inode_disk *disk_inode, off_t length);
 
+static bool inode_keep_indirect(block_sector_t *p_entry, size_t num_sectors, int level);
+
 /* Returns the number of sectors to allocate for an inode SIZE
    bytes long. */
 static inline size_t
@@ -435,11 +437,10 @@ static bool inode_allocate(struct inode_disk *disk_inode)
   return inode_keep(disk_inode, disk_inode->length);
 }
 
-static void
+static bool
 inode_keep_indirect(block_sector_t *p_entry, size_t num_sectors, int level)
 {
   static char zeros[BLOCK_SECTOR_SIZE];
-
 
   ASSERT(level <= 2);
 
@@ -448,17 +449,20 @@ inode_keep_indirect(block_sector_t *p_entry, size_t num_sectors, int level)
 
     if (*p_entry == 0)
     {
-      free_map_allocate(1, p_entry);
+      /* To pass dir-vine-persistence */
+      if(!free_map_allocate(1, p_entry))
+        return false;
       cache_write(*p_entry, zeros);
     }
-    return;
+    return true;
   }
 
   struct inode_indirect_block_sector indirect_block;
   if (*p_entry == 0)
   {
-    
-    free_map_allocate(1, p_entry);
+    /* To pass dir-vine-persistence */
+    if(!free_map_allocate(1, p_entry))
+      return false;
     cache_write(*p_entry, zeros);
 
   }
@@ -472,13 +476,15 @@ inode_keep_indirect(block_sector_t *p_entry, size_t num_sectors, int level)
   {
     size_t subsize = minest(num_sectors, unit);
 
-    inode_keep_indirect(&indirect_block.blocks[i], subsize, level - 1);
+    if(!inode_keep_indirect(&indirect_block.blocks[i], subsize, level - 1))
+      return false;
 
     num_sectors -= subsize;
   }
 
   ASSERT(num_sectors == 0);
   cache_write(*p_entry, &indirect_block);
+  return true;
 }
 
 static bool
@@ -501,7 +507,9 @@ inode_keep(struct inode_disk *disk_inode, off_t length)
 
     if (disk_inode->direct_blocks[i] == 0)
     { 
-      free_map_allocate(1, &disk_inode->direct_blocks[i]);
+      /* To pass dir-vine-persistence */
+      if(!free_map_allocate(1, &disk_inode->direct_blocks[i]))
+        return false;
       cache_write(disk_inode->direct_blocks[i], zeros);
     }
   }
@@ -511,13 +519,15 @@ inode_keep(struct inode_disk *disk_inode, off_t length)
 
 
   l = minest(num_sectors, 1 * INDIRECT_BLOCKS_PER_SECTOR);
-  inode_keep_indirect(&disk_inode->indirect_block, l, 1);
+  if(!inode_keep_indirect(&disk_inode->indirect_block, l, 1))
+    return false;
   num_sectors = num_sectors - l;
   if (num_sectors == 0)
     return true;
 
   l = minest(num_sectors, 1 * INDIRECT_BLOCKS_PER_SECTOR * INDIRECT_BLOCKS_PER_SECTOR);
-  inode_keep_indirect(&disk_inode->doubly_indirect_block, l, 2);
+  if(!inode_keep_indirect(&disk_inode->doubly_indirect_block, l, 2))
+    return false;
 
   num_sectors = num_sectors - l;
   if (num_sectors == 0)

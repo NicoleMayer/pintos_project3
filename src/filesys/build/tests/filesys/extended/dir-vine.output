@@ -35,9 +35,9 @@ Executing 'dir-vine':
 (dir-vine) end
 dir-vine: exit(0)
 Execution of 'dir-vine' complete.
-Timer: 67763 ticks
-Thread: 15 idle ticks, 585 kernel ticks, 67165 user ticks
-hdb1 (filesys): 11050 reads, 7212 writes
+Timer: 67737 ticks
+Thread: 22 idle ticks, 585 kernel ticks, 67132 user ticks
+hdb1 (filesys): 11048 reads, 7211 writes
 hda2 (scratch): 241 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 1218 characters output

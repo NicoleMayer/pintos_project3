@@ -41,7 +41,7 @@ Executing 'grow-file-size':
 grow-file-size: exit(0)
 Execution of 'grow-file-size' complete.
 Timer: 688 ticks
-Thread: 4 idle ticks, 571 kernel ticks, 115 user ticks
+Thread: 4 idle ticks, 573 kernel ticks, 114 user ticks
 hdb1 (filesys): 527 reads, 479 writes
 hda2 (scratch): 234 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

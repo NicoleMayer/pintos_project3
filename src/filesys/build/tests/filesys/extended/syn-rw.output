@@ -42,15 +42,15 @@ child-syn-rw: exit(0)
 child-syn-rw: exit(3)
 child-syn-rw: exit(1)
 (syn-rw) wait for child 1 of 4 returned 0 (expected 0)
-(syn-rw) wait for child 2 of 4 returned 1 (expected 1)
 child-syn-rw: exit(2)
+(syn-rw) wait for child 2 of 4 returned 1 (expected 1)
 (syn-rw) wait for child 3 of 4 returned 2 (expected 2)
 (syn-rw) wait for child 4 of 4 returned 3 (expected 3)
 (syn-rw) end
 syn-rw: exit(0)
 Execution of 'syn-rw' complete.
-Timer: 2016 ticks
-Thread: 8 idle ticks, 936 kernel ticks, 1074 user ticks
+Timer: 1955 ticks
+Thread: 6 idle ticks, 937 kernel ticks, 1014 user ticks
 hdb1 (filesys): 913 reads, 725 writes
 hda2 (scratch): 354 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

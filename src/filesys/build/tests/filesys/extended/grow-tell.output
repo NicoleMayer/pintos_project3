@@ -41,11 +41,11 @@ Executing 'grow-tell':
 grow-tell: exit(0)
 Execution of 'grow-tell' complete.
 Timer: 682 ticks
-Thread: 5 idle ticks, 568 kernel ticks, 111 user ticks
+Thread: 3 idle ticks, 570 kernel ticks, 111 user ticks
 hdb1 (filesys): 527 reads, 479 writes
 hda2 (scratch): 234 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 1309 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
-Powering off..
+Powering off..Powering off..

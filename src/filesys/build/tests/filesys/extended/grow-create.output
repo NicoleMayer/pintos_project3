@@ -37,8 +37,8 @@ Executing 'grow-create':
 (grow-create) end
 grow-create: exit(0)
 Execution of 'grow-create' complete.
-Timer: 614 ticks
-Thread: 3 idle ticks, 568 kernel ticks, 46 user ticks
+Timer: 615 ticks
+Thread: 5 idle ticks, 566 kernel ticks, 46 user ticks
 hdb1 (filesys): 510 reads, 471 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

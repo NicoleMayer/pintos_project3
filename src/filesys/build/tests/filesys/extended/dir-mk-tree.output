@@ -37,11 +37,11 @@ Executing 'dir-mk-tree':
 dir-mk-tree: exit(0)
 Execution of 'dir-mk-tree' complete.
 Timer: 2248 ticks
-Thread: 5 idle ticks, 580 kernel ticks, 1665 user ticks
+Thread: 11 idle ticks, 580 kernel ticks, 1659 user ticks
 hdb1 (filesys): 970 reads, 834 writes
 hda2 (scratch): 238 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
-Console: 1216 characters output
+Console: 1217 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off..

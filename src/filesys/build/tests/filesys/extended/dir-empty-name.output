@@ -34,8 +34,8 @@ Executing 'dir-empty-name':
 (dir-empty-name) end
 dir-empty-name: exit(0)
 Execution of 'dir-empty-name' complete.
-Timer: 597 ticks
-Thread: 3 idle ticks, 569 kernel ticks, 27 user ticks
+Timer: 596 ticks
+Thread: 3 idle ticks, 568 kernel ticks, 27 user ticks
 hdb1 (filesys): 509 reads, 470 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

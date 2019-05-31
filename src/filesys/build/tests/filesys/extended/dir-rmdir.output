@@ -36,8 +36,8 @@ Executing 'dir-rmdir':
 (dir-rmdir) end
 dir-rmdir: exit(0)
 Execution of 'dir-rmdir' complete.
-Timer: 612 ticks
-Thread: 6 idle ticks, 565 kernel ticks, 44 user ticks
+Timer: 613 ticks
+Thread: 4 idle ticks, 567 kernel ticks, 44 user ticks
 hdb1 (filesys): 514 reads, 473 writes
 hda2 (scratch): 233 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes

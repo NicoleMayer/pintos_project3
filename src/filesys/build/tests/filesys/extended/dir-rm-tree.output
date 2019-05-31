@@ -39,11 +39,11 @@ Executing 'dir-rm-tree':
 dir-rm-tree: exit(0)
 Execution of 'dir-rm-tree' complete.
 Timer: 3255 ticks
-Thread: 14 idle ticks, 589 kernel ticks, 2654 user ticks
+Thread: 11 idle ticks, 592 kernel ticks, 2654 user ticks
 hdb1 (filesys): 1358 reads, 938 writes
 hda2 (scratch): 243 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 1317 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
-Powering off..
+Powering off..Powering off..
