@@ -1,0 +1,48 @@
+Copying tests/filesys/extended/dir-open to scratch partition...
+Copying tests/filesys/extended/tar to scratch partition...
+squish-pty bochs -q
+========================================================================
+                       Bochs x86 Emulator 2.6.7
+              Built from SVN snapshot on November 2, 2014
+                  Compiled on May  9 2019 at 14:22:32
+========================================================================
+PiLo hda1
+Loading............
+Kernel command line: -q -f extract run dir-open
+Pintos booting with 4,096 kB RAM...
+383 pages available in kernel pool.
+383 pages available in user pool.
+Calibrating timer...  164,400 loops/s.
+hda: 9,072 sectors (4 MB), model "BXHD00011", serial "Generic 1234"
+hda1: 192 sectors (96 kB), Pintos OS kernel (20)
+hda2: 236 sectors (118 kB), Pintos scratch (22)
+hda3: 8,192 sectors (4 MB), Pintos swap (23)
+hdb: 5,040 sectors (2 MB), model "BXHD00012", serial "Generic 1234"
+hdb1: 4,096 sectors (2 MB), Pintos file system (21)
+filesys: using hdb1
+scratch: using hda2
+swap: using hda3
+Formatting file system...done.
+Boot complete.
+Extracting ustar archive from scratch device into file system...
+Putting 'dir-open' into the file system...
+Putting 'tar' into the file system...
+Erasing ustar archive...
+Executing 'dir-open':
+(dir-open) begin
+(dir-open) mkdir "xyzzy"
+(dir-open) open "xyzzy"
+(dir-open) write "xyzzy"
+(dir-open) write "xyzzy" (must return -1, actually -1)
+(dir-open) end
+dir-open: exit(0)
+Execution of 'dir-open' complete.
+Timer: 621 ticks
+Thread: 5 idle ticks, 572 kernel ticks, 46 user ticks
+hdb1 (filesys): 523 reads, 477 writes
+hda2 (scratch): 235 reads, 2 writes
+hda3 (swap): 0 reads, 0 writes
+Console: 1208 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off..
