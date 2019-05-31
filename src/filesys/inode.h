@@ -6,6 +6,8 @@
 #include "filesys/off_t.h"
 #include "devices/block.h"
 
+/* Identifies an inode. */
+#define INODE_MAGIC 0x494e4f44
 #define DIRECT_BLOCKS_COUNT 123 /* Since I add a new field in inode_disk */
 #define INDIRECT_BLOCKS_PER_SECTOR 128
 

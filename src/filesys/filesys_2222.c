@@ -42,18 +42,19 @@ filesys_done (void)
   cache_close ();
 }
 
-/* Creates a file or directory named NAME with the given INITIAL_SIZE.
+/* Creates a file named NAME with the given INITIAL_SIZE.
    Returns true if successful, false otherwise.
    Fails if a file named NAME already exists,
-   or if internal memory allocation fails. */
+   or if internal memory allocation fails.TODO */
 bool
-filesys_create (const char *name, off_t initial_size, bool is_dir) 
+filesys_create (const char *path, off_t initial_size, bool is_dir) 
 {
   block_sector_t inode_sector = 0;
 
-  char directory[strlen(name)+1];
-  char file_name[strlen(name)+1];
-  get_directory_and_filename(name, directory, file_name);
+  // split path and name
+  char directory[ strlen(path) ];
+  char file_name[ strlen(path) ];
+  get_directory_and_filename(path, directory, file_name);
   struct dir *dir = dir_open_directory (directory);
 
   bool success = (dir != NULL
@@ -66,62 +67,87 @@ filesys_create (const char *name, off_t initial_size, bool is_dir)
   dir_close (dir);
 
   return success;
+  // block_sector_t inode_sector = 0;
+  // struct dir *dir = dir_open_root ();
+  // bool success = (dir != NULL
+  //                 && free_map_allocate (1, &inode_sector)
+  //                 && inode_create (inode_sector, initial_size)
+  //                 && dir_add (dir, name, inode_sector));
+  // if (!success && inode_sector != 0) 
+  //   free_map_release (inode_sector, 1);
+  // dir_close (dir);
+
+  // return success;
 }
 
 /* Opens the file with the given NAME.
    Returns the new file if successful or a null pointer
    otherwise.
    Fails if no file named NAME exists,
-   or if an internal memory allocation fails. */
+   or if an internal memory allocation fails. TODO*/
 struct file *
 filesys_open (const char *name)
 {
-  if (strlen(name) == 0) return NULL;
+    int l = strlen(name);
+  if (l == 0) return NULL;
 
-  char directory[strlen(name)+1];
-  char file_name[strlen(name)+1];
-
+  char directory[ l + 1 ];
+  char file_name[ l + 1 ];
   get_directory_and_filename(name, directory, file_name);
   struct dir *dir = dir_open_directory (directory);
+  struct inode *inode = NULL;
+
+  // removed directory handling
   if (dir == NULL) return NULL;
 
-  struct inode *inode = NULL;
-  if (strlen(file_name) > 0) 
-  {
+  if (strlen(file_name) > 0) {
     dir_lookup (dir, file_name, &inode);
     dir_close (dir);
   }
-  else 
-  { 
+  else { // empty filename : just return the directory
     inode = dir_get_inode (dir);
   }
 
-  if (inode == NULL || inode->removed)
+  // removed file handling
+  if (inode == NULL || inode_is_removed (inode))
     return NULL;
 
   return file_open (inode);
+  // struct dir *dir = dir_open_root ();
+  // struct inode *inode = NULL;
+
+  // if (dir != NULL)
+  //   dir_lookup (dir, name, &inode);
+  // dir_close (dir);
+
+  // return file_open (inode);
 }
 
 /* Deletes the file named NAME.
    Returns true if successful, false on failure.
    Fails if no file named NAME exists,
-   or if an internal memory allocation fails. */
+   or if an internal memory allocation fails. TODO*/
 bool
 filesys_remove (const char *name) 
 {
-  char directory[strlen(name)];
-  char file_name[strlen(name)];
-  get_directory_and_filename (name, directory, file_name);
+  char directory[ strlen(name) ];
+  char file_name[ strlen(name) ];
+  get_directory_and_filename(name, directory, file_name);
   struct dir *dir = dir_open_directory (directory);
 
-  bool success = dir != NULL && dir_remove (dir, file_name);
+  bool success = (dir != NULL && dir_remove (dir, file_name));
   dir_close (dir);
 
   return success;
+  // struct dir *dir = dir_open_root ();
+  // bool success = dir != NULL && dir_remove (dir, name);
+  // dir_close (dir); 
+
+  // return success;
 }
 
 
-/* Change the current working directory */
+/* Change CWD for the current thread. TODO 新增*/
 bool
 filesys_chdir (const char *name)
 {
@@ -131,6 +157,7 @@ filesys_chdir (const char *name)
     return false;
   }
 
+  // switch CWD
   dir_close (thread_current()->cwd);
   thread_current()->cwd = dir;
   return true;

@@ -43,21 +43,21 @@ Executing 'syn-read':
 (syn-read) exec child 8 of 10: "child-syn-read 7"
 (syn-read) exec child 9 of 10: "child-syn-read 8"
 (syn-read) exec child 10 of 10: "child-syn-read 9"
-child-syn-read: exit(7)
 child-syn-read: exit(6)
-child-syn-read: exit(9)
+child-syn-read: exit(2)
+child-syn-read: exit(1)
 child-syn-read: exit(0)
 (syn-read) wait for child 1 of 10 returned 0 (expected 0)
-child-syn-read: exit(8)
-child-syn-read: exit(2)
-child-syn-read: exit(3)
-child-syn-read: exit(4)
-child-syn-read: exit(5)
-child-syn-read: exit(1)
 (syn-read) wait for child 2 of 10 returned 1 (expected 1)
 (syn-read) wait for child 3 of 10 returned 2 (expected 2)
+child-syn-read: exit(4)
+child-syn-read: exit(3)
 (syn-read) wait for child 4 of 10 returned 3 (expected 3)
 (syn-read) wait for child 5 of 10 returned 4 (expected 4)
+child-syn-read: exit(9)
+child-syn-read: exit(8)
+child-syn-read: exit(7)
+child-syn-read: exit(5)
 (syn-read) wait for child 6 of 10 returned 5 (expected 5)
 (syn-read) wait for child 7 of 10 returned 6 (expected 6)
 (syn-read) wait for child 8 of 10 returned 7 (expected 7)
@@ -66,9 +66,9 @@ child-syn-read: exit(1)
 (syn-read) end
 syn-read: exit(0)
 Execution of 'syn-read' complete.
-Timer: 4565 ticks
-Thread: 52 idle ticks, 583 kernel ticks, 3932 user ticks
-hda2 (filesys): 820 reads, 461 writes
+Timer: 4574 ticks
+Thread: 44 idle ticks, 582 kernel ticks, 3950 user ticks
+hda2 (filesys): 815 reads, 461 writes
 hda3 (scratch): 227 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes
 Console: 2445 characters output

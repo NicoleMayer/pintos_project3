@@ -1,1 +1,5 @@
-PASS
+FAIL
+Kernel panic in file system extraction run: PANIC at ../../filesys/free-map.c:60 in free_map_open(): can't read free map
+Call stack: 0xc0028a4f
+Translation of call stack:
+0xc0028a4f: debug_panic (.../../lib/kernel/debug.c:38)

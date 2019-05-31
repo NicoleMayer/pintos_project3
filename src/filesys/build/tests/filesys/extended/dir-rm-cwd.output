@@ -15,7 +15,7 @@ Pintos booting with 4,096 kB RAM...
 Calibrating timer...  164,400 loops/s.
 hda: 9,072 sectors (4 MB), model "BXHD00011", serial "Generic 1234"
 hda1: 192 sectors (96 kB), Pintos OS kernel (20)
-hda2: 243 sectors (121 kB), Pintos scratch (22)
+hda2: 242 sectors (121 kB), Pintos scratch (22)
 hda3: 8,192 sectors (4 MB), Pintos swap (23)
 hdb: 5,040 sectors (2 MB), model "BXHD00012", serial "Generic 1234"
 hdb1: 4,096 sectors (2 MB), Pintos file system (21)
@@ -46,10 +46,10 @@ Executing 'dir-rm-cwd':
 (dir-rm-cwd) end
 dir-rm-cwd: exit(0)
 Execution of 'dir-rm-cwd' complete.
-Timer: 680 ticks
-Thread: 5 idle ticks, 592 kernel ticks, 85 user ticks
-hdb1 (filesys): 539 reads, 491 writes
-hda2 (scratch): 242 reads, 2 writes
+Timer: 675 ticks
+Thread: 4 idle ticks, 588 kernel ticks, 85 user ticks
+hdb1 (filesys): 536 reads, 489 writes
+hda2 (scratch): 241 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 1510 characters output
 Keyboard: 0 keys pressed

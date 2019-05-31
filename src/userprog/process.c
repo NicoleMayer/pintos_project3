@@ -126,16 +126,6 @@ start_process (void *file_name_)
   // up the semaphore
   sema_up(&thread_current()->parent->exec_sema);
 
-  // /* Set up CWD TODO*/
-  // if (pcb->parent_thread != NULL && pcb->parent_thread->cwd != NULL) {
-  //   // child process inherits the CWD
-  //   t->cwd = dir_reopen(pcb->parent_thread->cwd);
-  // }
-  // else {
-  //   t->cwd = dir_open_root();
-  // }
-
-
   /* Start the user process by simulating a return from an
      interrupt, implemented by intr_exit (in
      threads/intr-stubs.S).  Because intr_exit takes all of its
@@ -169,7 +159,9 @@ process_exit (void)
   struct thread *cur = thread_current ();
   uint32_t *pd;
 
-  if(cur->cwd) dir_close (cur->cwd); /* TODO Our implementation */
+  /* Our implementation: when a process exit, close the current directory */
+  if(cur->cwd) 
+    dir_close (cur->cwd); 
 
   /* Destroy the current process's page directory and switch back
      to the kernel-only page directory. */

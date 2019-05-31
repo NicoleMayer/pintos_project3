@@ -37,8 +37,8 @@ Executing 'args-multiple some arguments for you!':
 (args) end
 args-multiple: exit(0)
 Execution of 'args-multiple some arguments for you!' complete.
-Timer: 338 ticks
-Thread: 19 idle ticks, 283 kernel ticks, 39 user ticks
+Timer: 336 ticks
+Thread: 20 idle ticks, 282 kernel ticks, 36 user ticks
 hda2 (filesys): 241 reads, 203 writes
 hda3 (scratch): 101 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes

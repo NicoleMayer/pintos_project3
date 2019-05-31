@@ -34,8 +34,8 @@ Executing 'lg-create':
 (lg-create) end
 lg-create: exit(0)
 Execution of 'lg-create' complete.
-Timer: 717 ticks
-Thread: 24 idle ticks, 285 kernel ticks, 410 user ticks
+Timer: 716 ticks
+Thread: 21 idle ticks, 288 kernel ticks, 409 user ticks
 hda2 (filesys): 553 reads, 366 writes
 hda3 (scratch): 106 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes

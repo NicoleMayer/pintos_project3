@@ -20,17 +20,17 @@ hdb1: 4,096 sectors (2 MB), Pintos file system (21)
 filesys: using hdb1
 scratch: using hda2
 swap: using hda3
-Boot complete.
-Executing 'tar fs.tar /':
-tar: exit(0)
-Execution of 'tar fs.tar /' complete.
-Appending 'fs.tar' to ustar archive on scratch device...
-Timer: 2061 ticks
-Thread: 50 idle ticks, 275 kernel ticks, 1738 user ticks
-hdb1 (filesys): 1438 reads, 782 writes
-hda2 (scratch): 0 reads, 278 writes
+Kernel PANIC at ../../filesys/free-map.c:60 in free_map_open(): can't read free map
+Call stack: 0xc0028a4f.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 108 ticks
+Thread: 1 idle ticks, 107 kernel ticks, 0 user ticks
+hdb1 (filesys): 1 reads, 0 writes
+hda2 (scratch): 0 reads, 0 writes
 hda3 (swap): 0 reads, 0 writes
-Console: 920 characters output
+Console: 1021 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
-Powering off..Copying tests/filesys/extended/dir-vine.tar out of /tmp/7S_mTZiwWI.dsk...
+Powering off..Copying tests/filesys/extended/dir-vine.tar out of /tmp/TSbrwCh6TX.dsk...

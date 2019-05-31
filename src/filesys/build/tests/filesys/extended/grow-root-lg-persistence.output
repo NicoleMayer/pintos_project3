@@ -25,12 +25,12 @@ Executing 'tar fs.tar /':
 tar: exit(0)
 Execution of 'tar fs.tar /' complete.
 Appending 'fs.tar' to ustar archive on scratch device...
-Timer: 2478 ticks
-Thread: 26 idle ticks, 324 kernel ticks, 2130 user ticks
-hdb1 (filesys): 1078 reads, 352 writes
-hda2 (scratch): 0 reads, 340 writes
+Timer: 2464 ticks
+Thread: 25 idle ticks, 323 kernel ticks, 2118 user ticks
+hdb1 (filesys): 1079 reads, 352 writes
+hda2 (scratch): 0 reads, 339 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 920 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
-Powering off..Copying tests/filesys/extended/grow-root-lg.tar out of /tmp/TqCUJwj1HB.dsk...
+Powering off..Copying tests/filesys/extended/grow-root-lg.tar out of /tmp/oLbzi7krHQ.dsk...

@@ -30,7 +30,7 @@ Executing 'close-stdout':
 (close-stdout) end
 close-stdout: exit(0)
 Execution of 'close-stdout' complete.
-Timer: 313 ticks
+Timer: 314 ticks
 Thread: 20 idle ticks, 277 kernel ticks, 19 user ticks
 hda2 (filesys): 239 reads, 203 writes
 hda3 (scratch): 101 reads, 2 writes

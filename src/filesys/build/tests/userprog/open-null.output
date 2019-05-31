@@ -29,8 +29,8 @@ Executing 'open-null':
 (open-null) begin
 open-null: exit(-1)
 Execution of 'open-null' complete.
-Timer: 311 ticks
-Thread: 19 idle ticks, 278 kernel ticks, 16 user ticks
+Timer: 310 ticks
+Thread: 19 idle ticks, 277 kernel ticks, 17 user ticks
 hda2 (filesys): 239 reads, 203 writes
 hda3 (scratch): 101 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes

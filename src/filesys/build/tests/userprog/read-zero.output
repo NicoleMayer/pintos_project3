@@ -33,8 +33,8 @@ Executing 'read-zero':
 (read-zero) end
 read-zero: exit(0)
 Execution of 'read-zero' complete.
-Timer: 337 ticks
-Thread: 21 idle ticks, 293 kernel ticks, 25 user ticks
+Timer: 336 ticks
+Thread: 20 idle ticks, 296 kernel ticks, 23 user ticks
 hda2 (filesys): 250 reads, 211 writes
 hda3 (scratch): 105 reads, 2 writes
 hda4 (swap): 0 reads, 0 writes

@@ -15,7 +15,7 @@ Pintos booting with 4,096 kB RAM...
 Calibrating timer...  164,400 loops/s.
 hda: 9,072 sectors (4 MB), model "BXHD00011", serial "Generic 1234"
 hda1: 192 sectors (96 kB), Pintos OS kernel (20)
-hda2: 239 sectors (119 kB), Pintos scratch (22)
+hda2: 238 sectors (119 kB), Pintos scratch (22)
 hda3: 8,192 sectors (4 MB), Pintos swap (23)
 hdb: 5,040 sectors (2 MB), model "BXHD00012", serial "Generic 1234"
 hdb1: 4,096 sectors (2 MB), Pintos file system (21)
@@ -46,10 +46,10 @@ Executing 'grow-two-files':
 (grow-two-files) end
 grow-two-files: exit(0)
 Execution of 'grow-two-files' complete.
-Timer: 837 ticks
-Thread: 9 idle ticks, 579 kernel ticks, 251 user ticks
-hdb1 (filesys): 625 reads, 546 writes
-hda2 (scratch): 238 reads, 2 writes
+Timer: 829 ticks
+Thread: 7 idle ticks, 578 kernel ticks, 246 user ticks
+hdb1 (filesys): 611 reads, 531 writes
+hda2 (scratch): 237 reads, 2 writes
 hda3 (swap): 0 reads, 0 writes
 Console: 1555 characters output
 Keyboard: 0 keys pressed
